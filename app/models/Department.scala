@@ -1,8 +1,7 @@
 package models
 
-import java.sql.Timestamp
-
 /*
+import java.sql.Timestamp
 case class Department(d_id: Long,
                       d_name: String,
                       createdDate: Timestamp,
@@ -11,7 +10,9 @@ case class Department(d_id: Long,
                       updatedBy: String
                       activeStatus : String)
 */
-case class Department(d_id: Long, d_name: String, activeStatus : String){
+case class Department(d_id: Long,
+                      d_name: String,
+                      activeStatus : String){
 
   def this() = this(0,"","")
   var department: List[Department] = null

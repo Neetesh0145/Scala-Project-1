@@ -1,6 +1,12 @@
 package Constant
 
 object Constants {
-  val MAX_EMPLOYEE_COUNT :Int = 6
+
+  val DIRECTOR_ELIGIBILITY_AGE = 40
+  val MAX_EMPLOYEE_COUNT  = 6
+
+  val ENGINEERING_DEPARTMENT  = 2;
+  val OPERATIONS_DEPARTMENT  = 3
+
 
 }

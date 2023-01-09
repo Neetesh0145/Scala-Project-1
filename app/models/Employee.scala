@@ -1,11 +1,7 @@
 package models
 
-
-
 import Constant.Constants
 
-import java.sql.Timestamp
-import scala.collection.mutable.ListBuffer
 /*
 case class Employee(e_id: Long,
                     d_id: Long,
@@ -88,11 +84,12 @@ case class Employee(e_id: Long,
   //-----------
   def recommendedForDirector() : List[Employee] = {
     employee = addEmployee();
-    var employeeList = employee.filter( x => (x.d_id==2 || x.d_id==3) && x.e_age>40)
+    var employeeList = employee.filter( x => (x.d_id==Constants.ENGINEERING_DEPARTMENT
+      || x.d_id==Constants.OPERATIONS_DEPARTMENT )
+      && x.e_age>Constants.DIRECTOR_ELIGIBILITY_AGE)
     return employeeList
   }
 
-  //def addEmployee(e_id: Long, d_id: Long, e_name: String, e_age: Int, activeStatus : String) : List[Employee] ={
   def addEmployee() : List[Employee] ={
   var employee1 = new Employee(1,1,"Jeet",54,"Y")
   var employee2 = new Employee(2,1,"Sandeep",50,"Y")
@@ -121,7 +118,7 @@ case class Employee(e_id: Long,
     employee = List(employee1, employee2, employee3, employee4, employee5, employee6, employee7,
       employee8, employee9, employee10, employee11, employee12, employee13, employee14,
       employee15, employee16, employee17, employee18, employee19, employee20)
-    //employee.foreach(println)
+
     return employee
   }
 
@@ -142,12 +139,8 @@ case class Employee(e_id: Long,
     var employee19 = new Employee(19,4,"Mukesh",42,"Y")
 
     var eldestInDepartmentList: List[Employee] = List(employee1, employee6, employee14, employee19)
-    //eldestInDepartmentList.foreach(println)
     return eldestInDepartmentList
   }
-
-
-
 
   def deleteEmployee(e_id : Long) : Unit = {
 
