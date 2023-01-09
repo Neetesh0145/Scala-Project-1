@@ -19,9 +19,9 @@ case class Department(d_id: Long,
 
   def  addDepartment() : List[Department] ={
     var department1 = new Department(1,"Directors","Y")
-    var department2 = new Department(1,"Engineering","Y")
-    var department3 = new Department(1,"Services","Y")
-    var department4 = new Department(1,"Operations","Y")
+    var department2 = new Department(2,"Engineering","Y")
+    var department3 = new Department(3,"Services","Y")
+    var department4 = new Department(4,"Operations","Y")
 
     department = List(department1, department2, department3, department4)
     department.foreach(println)

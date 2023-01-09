@@ -1,6 +1,44 @@
 @( eldestInDepartmentList : List[Employee])
 
 @main("Eldest In Department") {
-<h1>Eldest In Department</h1>
-<h3>@eldestInDepartmentList.toString()</h3>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<h2 style="font-size: xx-large:" class="text-primary">Eldest In Department</h2>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Department Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Active Status</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(e <- eldestInDepartmentList) {
+    <tr >
+        <td>@e.e_id</td>
+        <td>@e.d_id</td>
+        <td>@e.e_name</td>
+        <td>@e.e_age</td>
+        <td>@e.activeStatus</td>
+        <td><button type="button" class="btn btn-info">Update</button></td>
+        <td><button type="button" class="btn btn-danger">Primary</button></td>
+    </tr>
+    }
+    </tbody>
+</table>
+</body>
+</html>
+
 }

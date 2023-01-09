@@ -1,7 +1,51 @@
 @( employeeList : List[Employee])
 
 @main("Employee") {
-<h1>Employee</h1>
-<h3>@employeeList.toString()</h3>
+<!--<h1>Employee</h1>-->
+<!--<h3>@employeeList.toString()</h3>-->
+
+
+<img src="https://www.intimetec.com/hubfs/ITT%20Website%20Logo.png" alt="ITT Website Logo"
+     width="200%" style="max-width: 300px; max-height: 88px; margin-left: 0.1px;">
+
+<hr></br>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<h2 style="font-size: xx-large:" class="text-primary">Employees</h2>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Department Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Active Status</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(e <- employeeList) {
+    <tr >
+        <td>@e.e_id</td>
+        <td>@e.d_id</td>
+        <td>@e.e_name</td>
+        <td>@e.e_age</td>
+        <td>@e.activeStatus</td>
+        <td><button type="button" class="btn btn-info">Update</button></td>
+        <td><button type="button" class="btn btn-danger">Primary</button></td>
+    </tr>
+    }
+    </tbody>
+</table>
+</body>
+</html>
+
 
 }

@@ -1,7 +1,41 @@
 @( recommendedForDirector : List[Employee])
 
 @main("Employees Recommended For Directors") {
-<h1>Employees Recommended For Directors</h1>
-<h3>@recommendedForDirector.toString()</h3>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<h2 style="font-size: xx-large:" class="text-primary">Employees Recommended For Directors</h2>
+</br>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Department Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Active Status</th>
+        <th scope="col">Convert</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(e <- recommendedForDirector) {
+    <tr >
+        <td>@e.e_id</td>
+        <td>@e.d_id</td>
+        <td>@e.e_name</td>
+        <td>@e.e_age</td>
+        <td>@e.activeStatus</td>
+        <td><button type="button" class="btn btn-warning">Convert</button></td>
+    </tr>
+    }
+    </tbody>
+</table>
+</body>
+</html>
 
 }
