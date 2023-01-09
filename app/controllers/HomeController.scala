@@ -4,10 +4,8 @@ import Service.{DepartmentService, EmployeeService}
 import models.{Department, Employee}
 
 import javax.inject._
-import play.api._
 import play.api.mvc._
 
-import scala.collection.mutable.ListBuffer
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
