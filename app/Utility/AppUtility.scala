@@ -1,0 +1,5 @@
+package Utility
+
+class AppUtility {
+
+}

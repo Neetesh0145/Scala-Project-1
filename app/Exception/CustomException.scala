@@ -1,0 +1,5 @@
+package Exception
+
+class CustomException {
+
+}
